@@ -1,0 +1,371 @@
+{
+    "key": "group_5d4c799dde7c2",
+    "title": "Menu",
+    "fields": [
+        {
+            "key": "field_5d4c79a163a52",
+            "label": "Appetizers",
+            "name": "appetizers",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5d4c79af63a53",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Appetizer",
+            "sub_fields": [
+                {
+                    "key": "field_5d4c79af63a53",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d4c79c163a54",
+                    "label": "Cost",
+                    "name": "cost",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "$",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5d4c7c6227194",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d4cdf368ed36",
+                    "label": "Rating",
+                    "name": "rating",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "1": "1",
+                        "2": "2",
+                        "3": "3",
+                        "4": "4",
+                        "5": "5"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                }
+            ]
+        },
+        {
+            "key": "field_5d4c88dc8d0fa",
+            "label": "Entrées",
+            "name": "entrees",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5d4c79af63a53",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Entrée",
+            "sub_fields": [
+                {
+                    "key": "field_5d4c88dc8d0fb",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d4c88dc8d0fc",
+                    "label": "Cost",
+                    "name": "cost",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "$",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5d4c88dc8d0fd",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5d4c8a2abcd74",
+            "label": "Sandwiches & More",
+            "name": "sandwiches",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5d4c79af63a53",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Sandwich",
+            "sub_fields": [
+                {
+                    "key": "field_5d4c8a2abcd75",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d4c8a2abcd76",
+                    "label": "Cost",
+                    "name": "cost",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "$",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5d4c8a2abcd77",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5d4cb85fc0ef1",
+            "label": "Sides",
+            "name": "sides",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5d4c79af63a53",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Side",
+            "sub_fields": [
+                {
+                    "key": "field_5d4cb85fc0ef2",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d4cb85fc0ef3",
+                    "label": "Cost",
+                    "name": "cost",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "$",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5d4cb85fc0ef4",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/menu.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1565319119
+}
