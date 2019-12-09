@@ -1,0 +1,47 @@
+/*
+Theme Name: TAW 2020
+Theme URI: https://travisaw.com
+Author: Travis Wagner
+Author URI: http://travisaw.com
+Description: A minimalist wordpress theme that follows BEM methodology and organizes assets using an SMACSS approach.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+}
+
+body {
+	max-width: 680px;
+	margin: 0 auto;
+	font-size: 1em;
+	line-height: 1.6;
+	letter-spacing: 0.01em;
+	word-spacing: 0.05em;
+	font-family: Georgia, serif;
+	color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+	color: #000;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+figure {
+	margin: auto;
+}
