@@ -10,4 +10,4 @@ if ( file_exists( dirname( __FILE__ ) . '/functions-local.php' ) ) {
 	require_once dirname( __FILE__ ) . '/functions-local.php';
 }
 require_once 'inc/class-theme-setup.php';
-new Theme_Setup();
+$taw2020 = new Theme_Setup();
