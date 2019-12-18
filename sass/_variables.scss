@@ -1,0 +1,45 @@
+/**
+ * Variables
+ */
+
+// colors
+$blue        : #0067b1;
+$green       : #28a53c;
+$yellow      : #fdb913;
+$red         : #e43019;
+$purple      : #4b1d96;
+$grey--light : #ddd;
+$grey        : #666;
+$grey--dark  : #333;
+$black       : #000;
+$white       : #fff;
+
+$color__primary   : $purple;
+$color__secondary : $yellow;
+$color__accent    : $green;
+$color__link      : $purple;
+$color__text      : $grey--dark;
+$color__heading   : $black;
+$color__border    : $grey--light;
+
+// typography
+$font__size        : 18px;
+$font__primary     : "Raleway", "Helvetica Neue", sans-serif;
+$font__line-height : 1.6;
+
+// breakpoints
+$wide    : 1440px;
+$desktop : 1024px;
+$tablet  : 768px;
+$mobile  : 425px;
+
+// CSS variables
+:root {
+	--font-size: #{$font__size};
+	--font-family: #{$font__primary};
+	--line-height: #{$font__line-height};
+	--container-width: #{$tablet - 100};
+	--heading-color: #{$color__heading};
+	--body-color: #{$color__text};
+	--link-color: #{$color__link};
+}
