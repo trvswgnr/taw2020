@@ -1,18 +1,18 @@
 <?php
 /**
- * Theme Default Template
+ * Default Template
  *
  * @package taw
  */
 
 get_header();
 ?>
-<main class="container">
+<main id="main" class="container">
 <?php
 if ( have_posts() ) :
 	while ( have_posts() ) :
 		?>
-		<article class="content">
+		<article id="content" class="content rte" role="content">
 		<?php
 		the_post();
 		the_content();
