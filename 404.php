@@ -5,6 +5,6 @@
  * @package taw
  */
 
-get_header();
+get_header('dfsdf');
 echo "404 - There's nothing here!";
 get_footer();
