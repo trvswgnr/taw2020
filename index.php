@@ -7,21 +7,19 @@
 
 get_header();
 ?>
-<main id="main" class="container">
+<article id="content" class="content container rte" role="content">
 <?php
 if ( have_posts() ) :
 	while ( have_posts() ) :
 		?>
-		<article id="content" class="content rte" role="content">
 		<?php
 		the_post();
 		the_content();
 		?>
-		</article>
 		<?php
 	endwhile;
 endif;
 ?>
-</main>
+</article>
 <?php
 get_footer();
