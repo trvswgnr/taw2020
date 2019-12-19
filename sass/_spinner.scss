@@ -7,7 +7,7 @@ $number_of_rings: 15;
 $hue_adjust_amount: 3;
 $color_min: #262268;
 $color_max: adjust-hue($color_min, $number_of_rings * $hue_adjust_amount);
-$container_size: 100%;
+$spinner_size: 100%;
 
 // extends
 %bb {
@@ -23,6 +23,7 @@ $container_size: 100%;
 	margin: auto;
 }
 
+// spinner
 .spinner {
 
 	@extend %bb;
@@ -72,9 +73,9 @@ $container_size: 100%;
 		@extend %trbl;
 		@extend %bb;
 
-		max-width: $container_size + 20%;
+		max-width: $spinner_size + 20%;
 		height: 0;
-		padding-bottom: $container_size;
+		padding-bottom: $spinner_size;
 		animation: pulse 7s ease-in-out normal infinite forwards;
 	}
 
