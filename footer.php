@@ -7,6 +7,6 @@
 
 wp_footer();
 ?>
-		</main><!-- #main -->
-	</body>
+</main><!-- #main -->
+</body>
 </html>
