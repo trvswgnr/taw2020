@@ -4,7 +4,6 @@
 		"browser": true
 	},
 	"rules": {
-		"comma-dangle": [2, "never"],
-		"space-in-parens": ["error", "always"]
+		"comma-dangle": [2, "never"]
 	}
 }
