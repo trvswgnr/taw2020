@@ -16,13 +16,14 @@ class Theme_Setup {
 		if ( ! is_admin() ) {
 			add_action(
 				'wp_enqueue_scripts',
-				function() {
-					$this->styles();
-					$this->scripts();
+				function() { // phpcs:ignore
+					$this->styles(); // phpcs:ignore
+					$this->scripts(); // phpcs:ignore
 					wp_dequeue_style( 'wp-block-library' );
 				}
 			);
 			$this->remove_head_junk();
+			$this->theme_support();
 		}
 	}
 
@@ -72,7 +73,7 @@ class Theme_Setup {
 		);
 
 		// remove default jquery and add our own.
-		wp_deregister_script( 'jquery' );
+		wp_deregister_script( 'jquery' ); // phpcs:ignore
 		wp_enqueue_script(
 			'jquery',
 			'https://code.jquery.com/jquery-3.4.1.slim.min.js',
@@ -94,7 +95,13 @@ class Theme_Setup {
 
 		// dynamic title tags.
 		add_theme_support( 'title-tag' );
-
+		add_filter(
+			'document_title_separator',
+			function() { // phpcs:ignore
+				return '|';
+			}
+		);
+		
 		// featured images.
 		add_theme_support( 'post-thumbnails' );
 
@@ -157,7 +164,7 @@ class Theme_Setup {
 		// remove WP Embed.
 		add_action(
 			'wp_footer',
-			function() {
+			function() { // phpcs:ignore
 				wp_deregister_script( 'wp-embed' );
 			}
 		);
