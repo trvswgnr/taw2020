@@ -19,9 +19,10 @@ class Theme_Setup {
 				function() {
 					$this->styles();
 					$this->scripts();
-					$this->remove_head_junk();
+					wp_dequeue_style( 'wp-block-library' );
 				}
 			);
+			$this->remove_head_junk();
 		}
 	}
 
@@ -43,13 +44,12 @@ class Theme_Setup {
 			$media
 		);
 
-		// add Font Awesome icons.
 		wp_enqueue_style(
-			'font-awesome',
-			'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-			array(),
-			'4.7.0',
-			'all'
+			'font-raleway',
+			'https://fonts.googleapis.com/css?family=Raleway:200,400,700&display=swap',
+			$deps,
+			'14',
+			$media
 		);
 	}
 
