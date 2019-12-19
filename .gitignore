@@ -1,4 +1,6 @@
-/bower_components/
-/node_modules/
 functions-local.php
 .env
+/vendor
+.phpcs.xml
+phpcs.xml
+/node_modules
