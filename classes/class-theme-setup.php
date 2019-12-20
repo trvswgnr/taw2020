@@ -22,9 +22,10 @@ class Theme_Setup {
 					wp_dequeue_style( 'wp-block-library' );
 				}
 			);
-			$this->remove_head_junk();
-			$this->theme_support();
+			$this->clean_head();
 		}
+		add_action( 'after_setup_theme', array( $this, 'theme_support' ) );
+		add_action( 'customize_register', array( $this, 'customizer' ) );
 	}
 
 	/**
@@ -47,7 +48,7 @@ class Theme_Setup {
 
 		wp_enqueue_style(
 			'font-raleway',
-			'https://fonts.googleapis.com/css?family=Raleway:200,400,700&display=swap',
+			'https://fonts.googleapis.com/css?family=Raleway:200,500,700&display=swap',
 			$deps,
 			'14',
 			$media
@@ -76,7 +77,7 @@ class Theme_Setup {
 		wp_deregister_script( 'jquery' ); // phpcs:ignore
 		wp_enqueue_script(
 			'jquery',
-			'https://code.jquery.com/jquery-3.4.1.slim.min.js',
+			'https://code.jquery.com/jquery-3.4.1.min.js',
 			array(),
 			'3.4.1',
 			true
@@ -88,7 +89,7 @@ class Theme_Setup {
 	 */
 	public function theme_support() {
 		// translation support.
-		load_theme_textdomain( 'taw', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'twentytwenty' );
 
 		// default posts and comments RSS feed links in head.
 		add_theme_support( 'automatic-feed-links' );
@@ -102,8 +103,29 @@ class Theme_Setup {
 			}
 		);
 		
+		// switch default core markup for search form, comment form, and comments to output valid HTML5.
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+				'script',
+				'style',
+			)
+		);
+
 		// featured images.
 		add_theme_support( 'post-thumbnails' );
+
+		// full and wide align images.
+		add_theme_support( 'align-wide' );
+
+		// adds `async` and `defer` support for scripts registered or enqueued by the theme.
+		$loader = new Script_Loader();
+		add_filter( 'script_loader_tag', array( $loader, 'filter_script_loader_tag' ), 10, 2 );
 
 		// wp nav menu.
 		register_nav_menus(
@@ -123,7 +145,7 @@ class Theme_Setup {
 	/**
 	 * Get Rid of Extra Junk in <head>
 	 */
-	public function remove_head_junk() {
+	public function clean_head() {
 		// remove wp emoji.
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 		remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -167,6 +189,31 @@ class Theme_Setup {
 			function() { // phpcs:ignore
 				wp_deregister_script( 'wp-embed' );
 			}
+		);
+	}
+
+	/**
+	 * Customizer Settings
+	 *
+	 * @param Object $wp_customize Customizer object.
+	 */
+	public function customizer( $wp_customize ) {
+		$args = array(
+			'label'    => 'Upload Logo',
+			'section'  => 'title_tagline',
+			'settings' => 'theme_logo',
+		);
+
+		// add a setting for the site logo.
+		$wp_customize->add_setting( $args['settings'] );
+
+		// Add a control to upload the logo.
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				$args['settings'],
+				$args
+			)
 		);
 	}
 }
