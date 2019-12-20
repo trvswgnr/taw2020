@@ -5,5 +5,9 @@
 	},
 	"rules": {
 		"comma-dangle": [2, "never"]
+	},
+	"globals": {
+		"$": "writable",
+		"jQuery": "readonly"
 	}
 }
