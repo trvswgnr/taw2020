@@ -41,22 +41,35 @@ body {
 	overflow-x: hidden;
 	width: 100%;
 	min-height: 100%;
+	background-image: linear-gradient(to top left, #230c29, #270d2d);
 }
 
 .container {
 	max-width: var(--container-width);
 	margin: 0 auto;
-	padding: 0 1em;
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: var(--heading-color);
-	line-height: 1.3;
+.content {
+	background: $white;
+	padding-top: 0.5em;
+	padding-bottom: 2em;
+	margin-top: var(--content-margin);
+	margin-bottom: var(--content-margin);
+	opacity: 0;
+	transform: scale(2);
+	transform-origin: top;
+
+	&.is-active {
+		opacity: 1;
+		transform: scale(1);
+		transition: 0.5s;
+	}
+
+	&.is-active.no-transition {
+		transition: none;
+	}
 }
 
 table {
@@ -75,6 +88,10 @@ td {
 
 figure {
 	margin: auto;
+}
+
+p {
+	margin: 1em 0;
 }
 
 /**
