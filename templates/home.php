@@ -19,7 +19,7 @@ get_header();
 	</div>
 	<nav class="nav-home">
 		<ul class="nav-home__menu">
-		<li><a href="#">Résumé</a></li>
+		<li><a href="<?php echo esc_url( site_url() ); ?>/sssms-dev-synopsis">Résumé</a></li>
 		<li><a href="#">Portfolio</a></li>
 		<li><a href="#">Articles</a></li>
 		<li><a href="#">Music</a></li>
