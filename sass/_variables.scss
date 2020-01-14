@@ -38,8 +38,15 @@ $mobile  : 425px;
 	--font-size: #{$font__size};
 	--font-family: #{$font__primary};
 	--line-height: #{$font__line-height};
-	--container-width: #{$tablet - 100};
+	--container-width: #{$tablet - 50};
 	--heading-color: #{$color__heading};
 	--body-color: #{$color__text};
 	--link-color: #{$color__link};
+	--container-padding: 2rem;
+	--content-margin: 3em;
+
+	@media (max-width: $tablet) {
+		--container-padding: 1rem;
+		--content-margin: 0;
+	}
 }
