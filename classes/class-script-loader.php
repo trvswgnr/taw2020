@@ -12,7 +12,6 @@ if ( ! class_exists( 'Script_Loader' ) ) {
 	 * A class that provides a way to add `async` or `defer` attributes to scripts.
 	 */
 	class Script_Loader {
-
 		/**
 		 * Adds async/defer attributes to enqueued / registered scripts.
 		 *
