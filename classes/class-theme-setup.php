@@ -16,9 +16,9 @@ class Theme_Setup {
 		if ( ! is_admin() ) {
 			add_action(
 				'wp_enqueue_scripts',
-				function() { // phpcs:ignore
-					$this->styles(); // phpcs:ignore
-					$this->scripts(); // phpcs:ignore
+				function() {
+					$this->styles();
+					$this->scripts();
 					wp_dequeue_style( 'wp-block-library' );
 				}
 			);
@@ -98,11 +98,11 @@ class Theme_Setup {
 		add_theme_support( 'title-tag' );
 		add_filter(
 			'document_title_separator',
-			function() { // phpcs:ignore
+			function() {
 				return '|';
 			}
 		);
-		
+
 		// switch default core markup for search form, comment form, and comments to output valid HTML5.
 		add_theme_support(
 			'html5',
@@ -186,7 +186,7 @@ class Theme_Setup {
 		// remove WP Embed.
 		add_action(
 			'wp_footer',
-			function() { // phpcs:ignore
+			function() {
 				wp_deregister_script( 'wp-embed' );
 			}
 		);
