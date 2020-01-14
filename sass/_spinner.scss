@@ -26,6 +26,11 @@ $spinner_size: 100%;
 // spinner
 .spinner {
 
+	&.is-active {
+		transform: scale(3);
+		transition: transform 1.5s;
+	}
+
 	@extend %bb;
 
 	position: fixed;
@@ -53,6 +58,7 @@ $spinner_size: 100%;
 		text-transform: uppercase;
 		font-weight: 500;
 		letter-spacing: 0.1em;
+		text-shadow: 0 0 1em rgb(135, 17, 220);
 	}
 
 	&__desc {
@@ -205,5 +211,5 @@ $spinner_size: 100%;
 .nav-home__menu li a:hover::after,
 .nav-home__menu li a:focus::after {
 	width: 100%;
-	transition: 0.2s ease-in-out;
+	transition: 0.15s ease-in-out;
 }
