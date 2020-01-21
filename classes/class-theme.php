@@ -8,7 +8,7 @@
 /**
  * Theme Setup
  */
-class Theme_Setup {
+class Theme {
 	/**
 	 * Constructor
 	 */
@@ -24,6 +24,7 @@ class Theme_Setup {
 			);
 			$this->clean_head();
 		}
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_styles' ) );
 		add_action( 'after_setup_theme', array( $this, 'theme_support' ) );
 		add_action( 'customize_register', array( $this, 'customizer' ) );
 	}
@@ -143,6 +144,33 @@ class Theme_Setup {
 	}
 
 	/**
+	 * Front-end Styles
+	 */
+	public function admin_styles() {
+		// add main stylesheet with dynamic versioning based on modified date.
+		$handle = 'admin-style';
+		$ver    = '1.' . filemtime( get_template_directory() . '/admin.css' );
+		$src    = get_template_directory_uri() . '/admin.css?ver=' . $ver;
+		$deps   = array();
+		$media  = 'all';
+		wp_enqueue_style(
+			$handle,
+			$src,
+			$deps,
+			"$ver",
+			$media
+		);
+
+		wp_enqueue_style(
+			'font-raleway',
+			'https://fonts.googleapis.com/css?family=Raleway:200,500,700&display=swap',
+			$deps,
+			'14',
+			$media
+		);
+	}
+
+	/**
 	 * Get Rid of Extra Junk in <head>
 	 */
 	public function clean_head() {
@@ -216,4 +244,60 @@ class Theme_Setup {
 			)
 		);
 	}
+
+	/**
+	 * Remove Empty Paragraph Tags
+	 */
+	public static function remove_empty_p() {
+		add_filter(
+			'the_content',
+			function ( $content ) {
+				$content = force_balance_tags( $content );
+				$content = preg_replace( '#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content );
+				return $content;
+			},
+			7
+		);
+	}
+
+	/**
+	 * Add Block Category
+	 *
+	 * @param string $name Category name.
+	 */
+	public static function add_block_category( $name ) {
+		add_filter(
+			'block_categories',
+			function( $categories, $post ) use ( $name ) {
+				$slug   = str_replace( ' ', '-', strtolower( $name ) );
+				$blocks = array_merge(
+					$categories,
+					array(
+						array(
+							'slug'  => $slug,
+							'title' => $name,
+						),
+					)
+				);
+				return $blocks;
+			},
+			10,
+			2
+		);
+	}
+
+	/**
+	 * Map Link From Address
+	 *
+	 * @param string $address Address input string.
+	 * @return $address;
+	 */
+	public static function address_map_link( $address ) {
+		$address = preg_replace( '/( |\n|\r)/i', ' ', $address );
+		$address = preg_replace( '/(\<br\>|\<br \/\>)/i', ',', $address );
+		$address = str_replace( '  ', ' ', $address );
+		$address = 'https://www.google.com/maps/place/' . $address;
+		return $address;
+	}
+
 }
