@@ -1,0 +1,90 @@
+/**
+ * Resume Styles
+ */
+
+$resume-profile-pic-size: 160px;
+
+.resume {
+	--container-width: 1024px;
+
+	margin-top: 3em;
+	margin-bottom: 3em;
+	opacity: 0;
+	transform: scale(2);
+	transform-origin: top;
+
+	&.is-active {
+		opacity: 1;
+		transform: scale(1);
+		transition: 0.5s;
+	}
+
+	&.is-active.no-transition {
+		transition: none;
+	}
+}
+
+.resume__sidebar,
+.resume__content {
+	background-color: #fff;
+	padding: 1.3em;
+}
+
+.resume__sidebar {
+	width: 320px;
+	margin-top: $resume-profile-pic-size/2;
+	padding-top: 0;
+}
+
+.resume__content {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+.sidebar__heading {
+	margin-bottom: 0.5em;
+}
+
+.profile__pic {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+	max-width: $resume-profile-pic-size;
+	margin: 0 auto;
+	top: -$resume-profile-pic-size/2;
+	margin-bottom: -$resume-profile-pic-size/2;
+}
+
+.profile__pic img {
+	display: block;
+}
+
+.profile__title {
+	font-size: calc(0.5em + 0.7vw);
+	font-weight: 400;
+	color: $color__primary;
+	margin-top: 0.2em;
+	margin-bottom: 1em;
+}
+
+h1.profile__name {
+	font-style: italic;
+	font-family: Gro;
+	font-size: 2em;
+	margin-bottom: 0;
+}
+
+.contact__type {
+	margin-bottom: 0;
+	font-size: 0.75em;
+}
+
+address {
+	margin-bottom: 1.25em;
+	font-style: normal;
+}
+
+address a {
+	display: block;
+}
