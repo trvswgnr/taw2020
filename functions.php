@@ -11,14 +11,21 @@ if ( file_exists( dirname( __FILE__ ) . '/functions-local.php' ) ) {
 }
 
 // async script loader.
-require_once get_template_directory() . '/classes/class-script-loader.php';
+require_once 'classes/class-script-loader.php';
 
 // theme setup.
-require_once get_template_directory() . '/classes/class-theme-setup.php';
+require_once 'classes/class-theme.php';
 
 // blocks.
-require_once get_template_directory() . '/blocks/class-block.php';
-require_once get_template_directory() . '/blocks/resume/list-columns/class-list-columns.php';
+require_once 'blocks/class-block.php';
+require_once 'blocks/resume/list-columns/class-list-columns.php';
+require_once 'blocks/resume/experience/class-experience.php';
+require_once 'blocks/resume/chips/class-chips.php';
 
-$taw                 = new Theme_Setup();
+$taw                 = new Theme();
 $resume_list_columns = new Resume\List_Columns();
+$resume_experience   = new Resume\Experience();
+$resume_chips        = new Resume\Chips();
+
+Theme::remove_empty_p();
+Theme::add_block_category( 'Resume' );
