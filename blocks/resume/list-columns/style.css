@@ -1,0 +1,1 @@
+.resume-list-columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:0}.resume-list-columns__item{display:block;width:150px;margin-bottom:0.7em;font-size:0.8em;color:rgba(0,0,0,0.5)}.resume-list-columns__item::before{content:"\2022";color:#501895;padding-right:0.5em}
