@@ -4,7 +4,7 @@
  *
  * Allow `async` and `defer` while enqueuing Javascript.
  *
- * @package taw2020
+ * @package taw
  */
 
 if ( ! class_exists( 'Script_Loader' ) ) {
