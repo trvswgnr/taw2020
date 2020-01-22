@@ -36,6 +36,17 @@ body {
 	overflow-x: hidden;
 }
 
+hr {
+	border: none;
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+	margin: 1.3rem auto;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 #main {
 	position: absolute;
 	overflow-x: hidden;
@@ -49,6 +60,19 @@ body {
 	margin: 0 auto;
 	padding-left: var(--container-padding);
 	padding-right: var(--container-padding);
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	margin-left: -$grid__spacing;
+	margin-right: -$grid__spacing;
+}
+
+.col {
+	min-height: 1em;
+	margin-left: $grid__spacing;
+	margin-right: $grid__spacing;
 }
 
 .content {
@@ -115,4 +139,16 @@ a:active {
 a:focus,
 a:active {
 	border-bottom: 1px solid;
+}
+
+
+/**
+ * Link List
+ */
+
+.link-list {
+
+	a {
+		display: block;
+	}
 }
