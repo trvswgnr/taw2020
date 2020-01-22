@@ -57,7 +57,7 @@ class Education extends \Block {
 						'label'         => 'Logo',
 						'name'          => 'logo',
 						'type'          => 'image',
-						'return_format' => 'id',
+						'return_format' => 'url',
 						'preview_size'  => 'thumbnail',
 					),
 				),
