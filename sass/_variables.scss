@@ -25,13 +25,16 @@ $color__border    : $grey--light;
 // typography
 $font__size        : 18px;
 $font__primary     : "Raleway", "Helvetica Neue", sans-serif;
-$font__line-height : 1.6;
+$font__line-height : 1.5;
 
 // breakpoints
 $wide    : 1440px;
 $desktop : 1024px;
 $tablet  : 768px;
 $mobile  : 425px;
+
+// grid
+$grid__spacing: 15px;
 
 // CSS variables
 :root {
@@ -42,7 +45,7 @@ $mobile  : 425px;
 	--heading-color: #{$color__heading};
 	--body-color: #{$color__text};
 	--link-color: #{$color__link};
-	--container-padding: 2rem;
+	--container-padding: 0;
 	--content-margin: 3em;
 
 	@media (max-width: $tablet) {
