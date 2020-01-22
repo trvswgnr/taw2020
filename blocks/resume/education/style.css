@@ -1,0 +1,33 @@
+/**
+ * Style: Resume - Experience
+ */
+
+.resume-education {
+	background-color: rgba(0, 0, 0, 0.06);
+	padding: 1.2em 1em 1em;
+	margin-bottom: 1.3em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.resume-education__title {
+	--heading-color: #4b1d96;
+	margin: 0;
+}
+
+.resume-education__info {
+	margin-top: 0.2em;
+	margin-bottom: 0;
+	font-size: 0.75em;
+	font-weight: 300;
+	-webkit-font-smoothing: initial;
+}
+
+.resume-education__logo {
+	width: 50px;
+	height: 50px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
