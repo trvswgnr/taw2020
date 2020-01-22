@@ -1,0 +1,66 @@
+.banner {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: calc(1em + 4vw) 2em;
+	min-height: 30vw;
+	border: 1px solid #000;
+	background-color: #fff;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 4.2em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+
+	&:hover,
+	&:focus {
+		opacity: 0.9;
+	}
+
+	// disable link in admin.
+	.wp-admin & {
+		pointer-events: none;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0;
+		line-height: 1.2;
+	}
+}
+
+.banner__content {
+	text-align: center;
+	text-shadow: 0 0 1em rgba(#fff, 0.5);
+
+	&--right {
+		text-align: right;
+	}
+
+	&--left {
+		text-align: left;
+	}
+
+	&--full .banner__text {
+		max-width: 90%;
+	}
+
+	&--wide .banner__text {
+		max-width: 90%;
+	}
+}
+
+.banner__text {
+	display: inline-block;
+	max-width: 60%;
+	font-size: calc(1em + 3.5vw);
+	font-weight: 700;
+	text-align: center;
+	text-transform: lowercase;
+	color: #000;
+	line-height: 1.2;
+}
