@@ -1,0 +1,23 @@
+/**
+ * Style: Resume - Chips
+ */
+
+.resume-chips {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	list-style: none;
+	padding: 0;
+}
+
+.resume-chips li {
+	padding: 0.5em 1em;
+	background: #4b1d96;
+	color: #fff;
+	border-radius: 5em;
+	font-size: 0.75em;
+	line-height: 1.3;
+}
