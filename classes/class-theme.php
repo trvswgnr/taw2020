@@ -27,6 +27,12 @@ class Theme {
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_styles' ) );
 		add_action( 'after_setup_theme', array( $this, 'theme_support' ) );
 		add_action( 'customize_register', array( $this, 'customizer' ) );
+		add_filter(
+			'excerpt_length',
+			function( $length ) {
+				return 20;
+			}
+		);
 	}
 
 	/**

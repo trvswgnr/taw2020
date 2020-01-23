@@ -55,7 +55,7 @@ class Education extends \Block {
 					array(
 						'key'           => 'field_5e2649bead031',
 						'label'         => 'Logo',
-						'name'          => 'logo',
+						'name'          => 'resume_education_logo',
 						'type'          => 'image',
 						'return_format' => 'url',
 						'preview_size'  => 'thumbnail',

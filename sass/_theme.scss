@@ -67,6 +67,10 @@ img {
 	justify-content: space-between;
 	margin-left: -$grid__spacing;
 	margin-right: -$grid__spacing;
+
+	@media (max-width: $tablet) {
+		flex-direction: column;
+	}
 }
 
 .col {
@@ -79,6 +83,8 @@ img {
 	background: $white;
 	padding-top: 0.5em;
 	padding-bottom: 2em;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 	margin-top: var(--content-margin);
 	margin-bottom: var(--content-margin);
 	opacity: 0;
@@ -151,4 +157,13 @@ a:active {
 	a {
 		display: block;
 	}
+}
+
+.post-categories {
+	font-size: 0.75em;
+	padding-left: 1.2em;
+}
+
+.articles hr:last-child {
+	display: none;
 }

@@ -3,12 +3,17 @@
  */
 
 .resume-experience {
+	display: flex;
 	background-color: rgba(0, 0, 0, 0.06);
 	padding: 1.2em 1em 1em;
 	margin-bottom: 1.3em;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+}
+
+@media (max-width: 768px) {
+
+	.resume-experience {
+		flex-direction: column;
+	}
 }
 
 .resume-experience__title {
