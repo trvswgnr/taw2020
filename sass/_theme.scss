@@ -67,6 +67,10 @@ img {
 	justify-content: space-between;
 	margin-left: -$grid__spacing;
 	margin-right: -$grid__spacing;
+
+	@media (max-width: $tablet) {
+		flex-direction: column;
+	}
 }
 
 .col {

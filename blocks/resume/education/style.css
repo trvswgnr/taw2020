@@ -3,12 +3,12 @@
  */
 
 .resume-education {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	background-color: rgba(0, 0, 0, 0.06);
 	padding: 1.2em 1em 1em;
 	margin-bottom: 1.3em;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
 }
 
 .resume-education__title {
@@ -25,9 +25,10 @@
 }
 
 .resume-education__logo {
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
+	border-radius: 50%;
 }

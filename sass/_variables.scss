@@ -36,6 +36,9 @@ $mobile  : 425px;
 // grid
 $grid__spacing: 15px;
 
+// resume
+$resume__breakpoint: 923px;
+
 // CSS variables
 :root {
 	--font-size: #{$font__size};
@@ -48,7 +51,7 @@ $grid__spacing: 15px;
 	--container-padding: 0;
 	--content-margin: 3em;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $desktop) {
 		--container-padding: 1rem;
 		--content-margin: 0;
 	}
