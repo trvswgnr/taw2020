@@ -32,3 +32,4 @@ $resume_education    = new Resume\Education();
 Theme::remove_empty_p();
 Theme::add_block_category( 'Resume' );
 
+// require_once 'inc/unioncentrics-user.php';

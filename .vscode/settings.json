@@ -6,5 +6,29 @@
             "extensionName": ".css",
             "savePath": "~",
         }
-    ]
+	],
+	"emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.js$",
+                "isAsync": true,
+                "cmd": "eslint --fix ${file}"
+            },
+            {
+                "match": "\\.scss$",
+                "isAsync": true,
+                "cmd": "stylelint --fix ${file}"
+            },
+            {
+                "match": "\\.css$",
+                "isAsync": true,
+                "cmd": "stylelint --fix ${file}"
+            },
+            {
+                "match": "\\.php$",
+                "isAsync": true,
+                "cmd": "phpcbf ${file} --standard='WordPress'"
+            }
+        ]
+    },
 }

@@ -100,6 +100,11 @@ img {
 	&.is-active.no-transition {
 		transition: none;
 	}
+
+	@media (max-width: $tablet) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 table {

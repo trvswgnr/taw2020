@@ -17,7 +17,7 @@ $recent_work = get_field( 'resume_recent_work' );
 			<section class="resume__sidebar">
 				<?php if ( $profile ) : ?>
 					<div class="profile">
-						<a class="profile__pic"><?php echo wp_get_attachment_image( $profile['picture'], 'full' ); ?></a>
+						<a class="profile__pic" href="<?php echo esc_url( get_site_url() ); ?>"><?php echo wp_get_attachment_image( $profile['picture'], 'full' ); ?></a>
 						<h1 class="profile__name"><?php echo esc_html( $profile['name'] ); ?></h1>
 						<h2 class="profile__title"><?php echo esc_html( $profile['title'] ); ?></h2>
 						<?php if ( $profile['objective'] ) : ?>

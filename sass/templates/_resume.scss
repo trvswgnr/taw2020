@@ -75,6 +75,11 @@ $resume-profile-pic-size: 160px;
 	margin: 0 auto;
 	top: -$resume-profile-pic-size/2;
 	margin-bottom: -$resume-profile-pic-size/2;
+
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
 }
 
 .profile__pic img {

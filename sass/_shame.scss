@@ -1,0 +1,42 @@
+/**
+ * ShAmE
+ */
+
+@media (max-width: $tablet) {
+
+	.spinner__desc {
+		font-size: 0.7em;
+		opacity: 1;
+		display: none;
+	}
+
+	.nav-home {
+		padding: 0 1em;
+		font-size: 0.75em;
+	}
+
+	.nav-home__menu li::after {
+		display: none;
+	}
+
+	.nav-home__menu li {
+		padding: 0;
+		width: 50%;
+	}
+
+	.nav-home__menu {
+		margin: 0;
+	}
+
+	.nav-home__menu li a {
+		padding: 0.7em 0;
+	}
+
+	.spinner__text {
+		top: 50%;
+	}
+
+	.spinner__desc > span {
+		opacity: 0;
+	}
+}
