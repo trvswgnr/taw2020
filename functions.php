@@ -107,11 +107,16 @@ function taw_add_additional_pm_pro_fields() {
 require_once 'inc/custom-pmpro-page.php';
 
 global $wpdb;
+
 $table_name = $wpdb->prefix . 'pmpro_custom_account_fields';
 
 $sql = 'CREATE TABLE ' . $table_name . '(
-		name VARCHAR(30) PRIMARY KEY,
+		id int(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		name VARCHAR(30),
 		type VARCHAR(30),
-		attr VARCHAR(255)
+		attr VARCHAR(255),
+		location VARCHAR(50),
+		UNIQUE (name)
 	)';
 Theme::maybe_create_table( $table_name, $sql );
+
