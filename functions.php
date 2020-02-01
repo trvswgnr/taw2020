@@ -32,4 +32,86 @@ $resume_education    = new Resume\Education();
 Theme::remove_empty_p();
 Theme::add_block_category( 'Resume' );
 
-// require_once 'inc/unioncentrics-user.php';
+add_action( 'init', 'taw_add_additional_pm_pro_fields' );
+function taw_add_additional_pm_pro_fields() {
+	// don't break if Register Helper is not loaded
+	if ( ! function_exists( 'pmprorh_add_registration_field' ) ) {
+		return false;
+	}
+
+	/** fields after username */
+	// $fields = array();
+
+	// $fields[] = new PMProRH_Field(
+	// 'first_name',
+	// 'text',
+	// array(
+	// 'label'    => 'First name',
+	// 'required' => true,
+	// 'profile'  => false,
+	// )
+	// );
+
+	// $fields[] = new PMProRH_Field(
+	// 'last_name',
+	// 'text',
+	// array(
+	// 'label'    => 'Last name',
+	// 'required' => true,
+	// 'profile'  => false,
+	// )
+	// );
+
+	// // add the fields after username
+	// foreach ( $fields as $field ) {
+	// pmprorh_add_registration_field(
+	// 'after_username', // location on checkout page
+	// $field            // PMProRH_Field object
+	// );
+	// }
+
+	/** fields in after email address */
+	$fields = array();
+
+	$fields[] = new PMProRH_Field(
+		'company',
+		'text',
+		array(
+			'label'   => 'Company',
+			'profile' => true,
+		)
+	);
+
+	$fields[] = new PMProRH_Field(
+		'carrier_name',
+		'select',
+		array(
+			'label'   => 'Mobile Carrier',
+			'profile' => true,
+			'options' => array(
+				'Verizon',
+				'AT&T',
+			),
+		)
+	);
+
+	// add the fields into a new checkout_boxes are of the checkout page
+	foreach ( $fields as $field ) {
+		pmprorh_add_registration_field(
+			'after_email', // location on checkout page
+			$field            // PMProRH_Field object
+		);
+	}
+}
+
+require_once 'inc/custom-pmpro-page.php';
+
+global $wpdb;
+$table_name = $wpdb->prefix . 'pmpro_custom_account_fields';
+
+$sql = 'CREATE TABLE ' . $table_name . '(
+		name VARCHAR(30) PRIMARY KEY,
+		type VARCHAR(30),
+		attr VARCHAR(255)
+	)';
+Theme::maybe_create_table( $table_name, $sql );
