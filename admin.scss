@@ -74,3 +74,34 @@ p {
 	display: block;
 	margin: 1em 0;
 }
+
+.button-danger {
+	color: #a10000 !important;
+	border-color: #a10000 !important;
+	background: #f6f3f3 !important;
+	vertical-align: top;
+
+	&:hover,
+	&:focus {
+		color: #fff !important;
+		border-color: #a10000 !important;
+		background: #a10000 !important;
+	}
+}
+
+.flex-row {
+	display: flex;
+	margin: 0 -10px;
+
+	@media (max-width: 1240px) {
+		display: block;
+	}
+}
+
+.flex-col {
+	padding: 0 10px;
+
+	@media (max-width: 1240px) {
+		margin-top: 20px;
+	}
+}
